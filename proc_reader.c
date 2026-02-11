@@ -245,6 +245,7 @@ int is_number(const char* str) {
         {
             return 0;
         }
+        i++;
     }
     
     // TODO: Return 1 if all characters are digits
