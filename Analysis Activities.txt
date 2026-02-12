@@ -1,0 +1,8 @@
+How many system calls does each method make?
+open() makes 1 call to openat, 2 calls to read, and 1 call to close while fopen() makes 1 call to openat, 1 call to fstat, 2 calls to read, and 1 call to close.
+
+What's the difference between fopen() and open()?
+The difference between open() and fopen() is that open() is a system call and it returns an int which is used as a  file descriptor while fopen() opens the file using a C library and it returns a pointer to a FILE.
+
+Why does the library method make different system calls?
+The library method makes different system calls because it needs more information about the file in order to create a FILE pointer.
